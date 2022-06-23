@@ -1,0 +1,92 @@
+<div id="container" style="height: 160vh; width: 60vw; border: 2px solid black;
+  margin-left: auto;margin-right: auto; margin-top: 5vh;">
+
+  <!-- Upper Block -->
+  <div class="header" style="height: 10vh; width : auto; margin: 1vw;" >
+    <i class="bi bi-arrow-left " style="font-size: 5vh; margin-top: 18px;"></i>
+    <span><img src="assets/logo.png" style="margin-left : 1vw; height:4vw; width: 4vw;" alt=""></span>
+    <span style="margin-left: 1vw; font-size: 25px; ">John Doe
+      <p style="margin-left: 100px; font-size:medium; margin-top: -23px;" >+91 7672 2345</p>
+    </span>
+  </div>
+
+  <div class="line" style="border-bottom: 3px solid black;"></div>
+
+  <div class="dot" style=" margin-top :30px; border-top: 4px dotted black; width: 25vw; float: left;"> </div>
+  <p style="display: inline-block; text-align: center; margin-top: 16px; font-size: larger; margin-left: 8px; font-weight: 450;">{{tdetails[0].date}}</p>
+  <div class="dot" style=" margin-top :30px; border-top: 4px dotted black; width: 26vw; float: right;"> </div>
+
+  <!-- Transaction 1 -->
+  <div class="card1" style="float: right; height: 22vh; border: 2px solid black; margin-right: 30px; ">
+    <div class="line1">
+      <p style="font-size: 40px; margin-left: 20px; font-weight: 600; display: inline; margin-bottom: 0px; ">{{tdetails[0].amount | currency : 'INR':'symbol':'3.0' }}</p>
+      <p style="margin-left: 50px; font-weight: 500; display: inline; margin-right: 40px; margin-top: -20px; font-family: Arial, Helvetica, sans-serif;"><i class="bi bi-check-lg " style="color: rgb(43, 199, 43); font-size: 25px;"></i> You paid</p>
+    </div>
+
+    <div class="line2">
+      <p style=" margin-top: -100px; margin-left : 20px; display: inline; "><b>Transaction  ID</b></p>
+      <p style="  display: inline; margin-left: 190px; "><i class="bi bi-chevron-right" style="font-size:25px;"></i></p>
+      <p style=" margin-left : 20px; margin-top: -10px;">{{tdetails[0].tranid}}</p>
+
+    </div>
+    <p style="float: right; font-weight: 500; font-family: Arial, Helvetica, sans-serif; font-size: large;">{{tdetails[0].date}}, {{tdetails[0].time}}</p>
+  </div>
+
+  <div class="dot" style=" margin-top :170px; border-top: 4px dotted black; width: 25vw; float: left;"> </div>
+  <p style="display: inline-block; text-align: center; margin-top: 30px; font-size: larger; margin-left: 8px; font-weight: 450;">{{tdetails[1].date}}</p>
+  <div class="dot" style=" margin-top :43px; border-top: 4px dotted black; width: 26vw; float: right;"> </div>
+
+  <!-- Transaction 2 -->
+  <div class="card1" style="float: right; height: 22vh; border: 2px solid black; margin-right: 30px; margin-top: 15px; ">
+
+    <div class="line1">
+      <p style="font-size: 40px; margin-left: 20px; font-weight: 600; display: inline; margin-bottom: 0px; ">{{tdetails[1].amount | currency : 'INR':'symbol':'3.0'}}</p>
+      <p style="margin-left: 50px; font-weight: 500; display: inline; margin-right: 40px; margin-top: -20px; font-family: Arial, Helvetica, sans-serif;"><i class="bi bi-pin" style="color: rgb(43, 199, 43); font-size: 25px;"></i> You requested</p>
+    </div>
+
+    <div class="line2">
+      <button style="margin-left : 25px; padding: 5px; width: 85px; background-color: white;">Cancel</button>
+      <p style="  display: inline; margin-left: 190px; "><i class="bi bi-chevron-right" style="font-size:25px;"></i></p>
+    </div>
+    <p style="float: right; margin-top: 30px; font-weight: 500; font-family: Arial, Helvetica, sans-serif; font-size: large;">{{tdetails[1].date}}, {{tdetails[1].time}}</p>
+  </div>
+
+  <div class="dot" style=" margin-top :182px; border-top: 4px dotted black; width: 25vw; float: left;"> </div>
+  <p style="display: inline-block; text-align: center; margin-top: 30px; font-size: larger; margin-left: 8px; font-weight: 450;">{{tdetails[2].date}}</p>
+  <div class="dot" style=" margin-top :-30px; border-top: 4px dotted black; width: 26vw; float: right;"> </div>
+
+ <!-- Transaction 3 -->
+ <div class="card1" style="float: left; height: 22vh; border: 2px solid black; margin-left: 30px; ">
+  <div class="line1">
+    <p style="font-size: 40px; margin-left: 20px; font-weight: 600; display: inline; margin-bottom: 0px; ">{{tdetails[2].amount | currency : 'INR':'symbol':'3.0'}}</p>
+    <p style="margin-left: 30px; font-weight: 500; display: inline; margin-top: -20px; font-family: Arial, Helvetica, sans-serif;"><i class="bi bi-check-lg " style="color: rgb(43, 199, 43); font-size: 25px;"></i> You received</p>
+  </div>
+
+  <div class="line2">
+    <p style=" margin-top: -100px; margin-left : 20px; display: inline; "><b>Transaction  ID</b></p>
+    <p style="  display: inline; margin-left: 190px; "><i class="bi bi-chevron-right" style="font-size:25px;"></i></p>
+    <p style=" margin-left : 20px; margin-top: -10px;">{{tdetails[2].tranid}}</p>
+
+  </div>
+  <p style="float: right; font-weight: 500; font-family: Arial, Helvetica, sans-serif; font-size: large;">{{tdetails[2].date}}, {{tdetails[2].time}}</p>
+</div>
+
+ <!-- Transaction 4 -->
+ <div class="card1" style=" float: left; height: 22vh; border: 2px solid black; margin-left: 30px; margin-top: 60px; width: 28vw;">
+
+  <div class="line1">
+    <p style="font-size: 40px; margin-left: 20px; font-weight: 600; display: inline; margin-bottom: 0px; ">{{tdetails[3].amount | currency : 'INR':'symbol':'3.0'}}</p>
+    <p style="margin-left: 50px; font-weight: 500; display: inline; margin-top: -20px; font-family: Arial, Helvetica, sans-serif;"><i class="bi bi-pin" style="color: rgb(43, 199, 43); font-size: 25px;"></i> Request received</p>
+  </div>
+
+  <div class="line2">
+    <button style="margin-left : 10px; padding: 5px; width: 85px; background-color: white;">Pay</button>
+    <button style="margin-left : 10px; padding: 5px; width: 85px; background-color: white;">Cancel</button>
+    <p style="  display: inline; margin-left: 70px; "><i class="bi bi-chevron-right" style="font-size:25px;"></i></p>
+  </div>
+  <p style="float: right; margin-top: 30px; font-weight: 500; font-family: Arial, Helvetica, sans-serif; font-size: large;">{{tdetails[3].date}}, {{tdetails[3].time}}</p>
+</div>
+
+
+</div>
+
